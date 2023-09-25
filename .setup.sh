@@ -24,6 +24,6 @@ mkdir -p ~/.local/share/zoxide
 mkdir -p ~/.local/share/atuin
 
 zoxide init nushell > ~/.local/share/zoxide/init.nu
-atuin init nu > ~/.local/share/atuin/init.nu
+atuin init nu --disable-up-arrow > ~/.local/share/atuin/init.nu
 
 atuin login -u tibl

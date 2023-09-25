@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Til Blechschmidt
+	email = til@blechschmidt.de
+	signingkey = 2F4E54D35C8390CB
+# Please adapt and uncomment the following lines:
+[commit]
+	gpgsign = true

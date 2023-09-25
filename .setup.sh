@@ -18,8 +18,10 @@ config checkout
 config config status.showUntrackedFiles no
 
 cargo install nu --features dataframe
-cargo install zoxide
-cargo install atuin
+cargo install zoxide atuin fnm
+
+mkdir -p ~/.local/share/zoxide
+mkdir -p ~/.local/share/atuin
 
 zoxide init nushell > ~/.local/share/zoxide/init.nu
 atuin init nu > ~/.local/share/atuin/init.nu

@@ -1,3 +1,5 @@
+$env.config = ($env.config | merge {show_banner: false})
+
 source ~/.local/share/atuin/init.nu
 source ~/.local/share/zoxide/init.nu
 

@@ -13,4 +13,8 @@ use alias/open.nu *
 use alias/git.nu *
 
 use ./theme/nord.nu
-$env.config = ($env.config | merge {color_config: (nord)})
+
+$env.config = ($env.config | merge {
+	color_config: (nord)
+	table: { mode: "light" }
+})

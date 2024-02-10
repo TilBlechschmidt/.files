@@ -6,8 +6,6 @@ if status is-interactive
     alias cat="bat --paging=never"
     alias cd="z"
 
-    # abbr -a cd z
-
     abbr -a k kubectl
     abbr -a kg kubectl get
     abbr -a kgp kubectl get pod

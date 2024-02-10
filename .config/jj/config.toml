@@ -1,0 +1,6 @@
+[template-aliases]
+'format_short_id(id)' = 'id.shortest()'
+
+[user]
+name = "Til Blechschmidt"
+email = "me@tibl.dev"

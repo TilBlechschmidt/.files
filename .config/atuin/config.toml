@@ -5,6 +5,8 @@ enter_accept = true
 workspaces = true
 show_help = false
 
+prefers_reduced_motion = true
+
 [sync]
 records = true
 

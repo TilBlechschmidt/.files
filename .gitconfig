@@ -1,8 +1,15 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Til Blechschmidt
-	email = til@blechschmidt.de
-	signingkey = 2F4E54D35C8390CB
+	email = me@tibl.dev
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII/RQS4p5LRMtn8JgU0mvbMNmFfQlXIC48Qv8L03sB4A
 # Please adapt and uncomment the following lines:
 [commit]
 	gpgsign = true
+[pull]
+	rebase = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = /Users/tibl/.config/git/allowed_signers

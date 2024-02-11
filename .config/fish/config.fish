@@ -3,6 +3,7 @@ if status is-interactive
 
     alias cfg="git --git-dir=$HOME/.cfg --work-tree=$HOME"
     alias cat="bat --paging=never"
+    alias catp="bat --paging=never --style=plain"
     alias ls="eza -labgh --smart-group --no-quotes"
     alias cd="z"
 

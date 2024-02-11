@@ -1,13 +1,31 @@
-# This is Git's per-user configuration file.
 [user]
 	name = Til Blechschmidt
 	email = me@tibl.dev
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII/RQS4p5LRMtn8JgU0mvbMNmFfQlXIC48Qv8L03sB4A
-# Please adapt and uncomment the following lines:
-[commit]
-	gpgsign = true
+
 [pull]
 	rebase = true
+
+# Using `delta` as the diff viewer
+
+[core]
+	pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+# SSH key based commit signing setup
+[commit]
+	gpgsign = true
 [gpg]
 	format = ssh
 [gpg "ssh"]

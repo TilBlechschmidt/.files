@@ -1,9 +1,3 @@
-function fish_hello
-    if test "$SSH_CONNECTION" = ""
-        random choice 🐟 🐟 🐟 🐠 🐠 🐠 🐡
-    end
-end
-
 if status is-interactive
     set -gx JJ_CONFIG $HOME/.config/jj/config.toml
 
@@ -60,6 +54,4 @@ if status is-interactive
     abbr -a kc kubectl config
     abbr -a kcns kubectl config set-context --current --namespace
     abbr -a kcc kubectl config use-context
-
-    fish_hello
 end

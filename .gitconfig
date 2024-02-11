@@ -6,20 +6,18 @@
 [pull]
 	rebase = true
 
-# Using `delta` as the diff viewer
+[push]
+	autoSetupRemote = true
 
+# Using `delta` as the diff viewer
 [core]
 	pager = delta
-
 [interactive]
     diffFilter = delta --color-only
-
 [delta]
     navigate = true
-
 [merge]
     conflictstyle = diff3
-
 [diff]
     colorMoved = default
 

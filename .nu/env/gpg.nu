@@ -1,1 +1,0 @@
-$env.GPG_TTY = (tty)

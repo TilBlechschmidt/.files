@@ -1,1 +1,0 @@
-export alias cd = z

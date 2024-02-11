@@ -20,6 +20,6 @@ config config status.showUntrackedFiles no
 cargo install zoxide atuin \
   fnm bat fd-find procs du-dust ripgrep \
   tokei hyperfine bandwhich \
-  delta jj-cli
+  git-delta jj-cli
 
 atuin login -u tibl

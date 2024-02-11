@@ -18,8 +18,8 @@ config checkout
 config config status.showUntrackedFiles no
 
 cargo install zoxide atuin \
-  fnm bat fd-find procs du-dust ripgrep \
-  tokei hyperfine bandwhich \
+  bat fd-find procs du-dust ripgrep \
+  tokei hyperfine bandwhich bacon just fnm \
   git-delta jj-cli
 
 atuin login -u tibl

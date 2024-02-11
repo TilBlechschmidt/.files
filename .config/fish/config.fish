@@ -36,6 +36,8 @@ if status is-interactive
     abbr -a gl git pull
     abbr -a gpf git push --force-with-lease --force-if-includes
 
+    alias grepo 'git config --get remote.origin.url | sed "s/:/\//g" | sed "s/.git//g" | awk \'{print "http://"$1}\' | xargs open'
+
     ## Kubernetes
     abbr -a k kubectl
     abbr -a kl kubectl logs

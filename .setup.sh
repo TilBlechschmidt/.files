@@ -18,7 +18,7 @@ config checkout
 config config status.showUntrackedFiles no
 
 cargo install zoxide atuin \
-  fnm bat fd-find procs dust ripgrep \
+  fnm bat fd-find procs du-dust ripgrep \
   tokei hyperfine bandwhich \
   delta jj-cli
 

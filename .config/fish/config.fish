@@ -15,6 +15,7 @@ if status is-interactive
     abbr -a gst git status
     abbr -a glog git log
 
+    abbr -a gc git clone
     abbr -a gcb git checkout -b
 
     abbr -a ga git add

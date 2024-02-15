@@ -9,3 +9,4 @@ set -gx EDITOR nvim
 set -gx GPG_TTY tty
 set -gx BAT_THEME Nord
 set -gx LAUNCH_ENDPOINT "http://10.0.0.56:1200"
+set -gx JJ_CONFIG $HOME/.config/jj/config.toml

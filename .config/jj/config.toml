@@ -1,6 +1,11 @@
-[template-aliases]
-'format_short_id(id)' = 'id.shortest()'
-
 [user]
 name = "Til Blechschmidt"
 email = "me@tibl.dev"
+
+[ui]
+default-command = "log"
+paginate = "never"
+
+[template-aliases]
+'format_short_signature(signature)' = 'signature.username()'
+'format_timestamp(timestamp)' = 'timestamp.format("%F %H:%M")'

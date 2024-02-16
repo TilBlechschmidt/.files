@@ -39,6 +39,7 @@ if status is-interactive
     abbr -a kl kubectl logs
     abbr -a kdel kubectl delete
     abbr -a ka kubectl apply
+    abbr -a kx --set-cursor kubectl exec -it \% -- /bin/sh
 
     # get
     abbr -a kg kubectl get
@@ -54,8 +55,14 @@ if status is-interactive
 
     # config
     abbr -a kc kubectl config
-    abbr -a kcns kubectl config set-context --current --namespace
-    abbr -a kcc kubectl config use-context
+
+    if type -q kubectx
+        abbr -a kcns kubens
+        abbr -a kcc kubectx
+    else
+        abbr -a kcns kubectl config set-context --current --namespace
+        abbr -a kcc kubectl config use-context
+    end
 
 
     ###### ----------- Other ----------- ######

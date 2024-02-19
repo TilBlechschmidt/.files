@@ -46,6 +46,7 @@ if status is-interactive
     abbr -a kgs kubectl get service
     abbr -a kgn kubectl get node
     abbr -a kgp kubectl get pod
+    abbr -a kgpa kubectl get pod -A
     abbr -a kgpw kubectl get pod -w
 
     # describe

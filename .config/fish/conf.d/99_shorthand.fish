@@ -1,7 +1,6 @@
 if status is-interactive
 
     ###### ----- Tooling overrides ----- ######
-    alias cd 'z'
     alias ls 'eza -labgh --smart-group --no-quotes'
 
     alias cat 'bat --paging=never'

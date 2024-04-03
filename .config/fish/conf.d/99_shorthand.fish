@@ -38,6 +38,8 @@ if status is-interactive
     abbr -a kl kubectl logs
     abbr -a kdel kubectl delete
     abbr -a ka kubectl apply
+    abbr -a kaf kubectl apply -f
+    abbr -a kpf kubectl port-forward
     abbr -a kx --set-cursor kubectl exec -it \% -- /bin/sh
 
     # get

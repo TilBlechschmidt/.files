@@ -18,7 +18,7 @@ config checkout
 config config status.showUntrackedFiles no
 
 cargo install eza zoxide atuin \
-  bat fd-find procs du-dust ripgrep \
+  bat fd-find procs du-dust ripgrep rnr \
   tokei hyperfine bandwhich bacon just fnm \
   git-delta jj-cli
 

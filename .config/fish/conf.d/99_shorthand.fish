@@ -67,6 +67,15 @@ if status is-interactive
     end
 
 
+    ###### ----------- Rust ------------ ######
+    abbr -a c cargo
+
+    abbr -a cr cargo run
+    abbr -a crr cargo run --release
+
+    abbr -a cb cargo build
+    abbr -a cbr cargo build --release
+
     ###### ----------- Other ----------- ######
     abbr -a tf terraform
 

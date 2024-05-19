@@ -1,0 +1,24 @@
+theme = "nord"
+
+[editor]
+bufferline = "multiple"
+cursorline = false
+line-number = "relative"
+rulers = []
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "╎"
+render = true
+skip-levels = 1
+
+# Buffer navigation using Alt+,.
+[keys.normal]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+"A-/" = "repeat_last_motion"

@@ -1,0 +1,8 @@
+[aliases]
+os = [
+    "macos",
+    "linux",
+    "windows",
+]
+
+[templates]

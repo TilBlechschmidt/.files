@@ -4,7 +4,11 @@ email = "me@tibl.dev"
 
 [ui]
 default-command = "log"
-paginate = "never"
+paginate = "auto"
+pager = "delta"
+
+[ui.diff]
+format = "git"
 
 [template-aliases]
 'format_short_signature(signature)' = 'signature.username()'

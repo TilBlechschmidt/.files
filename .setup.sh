@@ -20,6 +20,6 @@ config config status.showUntrackedFiles no
 cargo install eza zoxide atuin \
   bat fd-find procs du-dust ripgrep rnr \
   tokei hyperfine bandwhich bacon just fnm \
-  git-delta jj-cli
+  git-delta git-ignore-generator jj-cli 
 
 atuin login -u tibl

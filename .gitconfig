@@ -9,6 +9,9 @@
 [push]
 	autoSetupRemote = true
 
+[credential]
+	helper = cache --timeout=86400
+
 # Using `delta` as the diff viewer
 [core]
 	pager = delta

@@ -16,4 +16,7 @@ if [ (uname) = "Darwin" ]
 
 	# iTerm2
 	test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish ; or true
+
+	# 1Password SSH agent — required for `jj`` and other libssh2 based commands
+	set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 end

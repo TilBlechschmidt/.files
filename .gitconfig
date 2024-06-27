@@ -12,6 +12,9 @@
 [credential]
 	helper = cache --timeout=86400
 
+[core]
+	excludesfile = ~/.config/git/ignore
+
 # Using `delta` as the diff viewer
 [core]
 	pager = delta
@@ -31,4 +34,4 @@
 	format = ssh
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-	allowedSignersFile = /Users/tibl/.config/git/allowed_signers
+	allowedSignersFile = ~/.config/git/allowed_signers

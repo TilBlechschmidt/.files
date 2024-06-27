@@ -35,3 +35,9 @@
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 	allowedSignersFile = ~/.config/git/allowed_signers
+
+# Profile for work repositories
+[includeIf "hasconfig:remote.*.url:git@gitlab.ppidev.net*/**"]
+	path = ~/.gitconfig-ppi
+[includeIf "hasconfig:remote.*.url:https://gitlab.ppidev.net/**"]
+	path = ~/.gitconfig-ppi

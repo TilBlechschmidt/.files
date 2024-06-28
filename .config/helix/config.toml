@@ -16,9 +16,11 @@ character = "╎"
 render = true
 skip-levels = 1
 
-# Buffer navigation using Alt+,.
 [keys.normal]
+# Buffer navigation using Alt+,.
 "A-," = "goto_previous_buffer"
 "A-." = "goto_next_buffer"
 "A-w" = ":buffer-close"
 "A-/" = "repeat_last_motion"
+# Replace X with selecting a line above
+"X" = "extend_line_above"

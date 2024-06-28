@@ -1,3 +1,11 @@
 [[language]]
 name = "git-commit"
 file-types = [{ glob = "COMMIT_EDITMSG" }, { glob = "*.jjdescription" }]
+
+[[language]]
+name = "javascript"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "html"
+indent = { tab-width = 2, unit = "    " }

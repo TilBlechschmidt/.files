@@ -1,11 +1,11 @@
 [user]
 name = "Til Blechschmidt"
-email = "me@tibl.dev"
+email = "til.blechschmidt@ppi-fs.de"
 
 [signing]
 sign-all = true
 backend = "ssh"
-key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII/RQS4p5LRMtn8JgU0mvbMNmFfQlXIC48Qv8L03sB4A"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK6fG6geQa+vmktZfEFmAhLD3XcZPwtAuJdHEMBOnkbB"
 
 [ui]
 default-command = "log"
@@ -23,7 +23,7 @@ l = ["log", "-r", "@ | ancestors(immutable_heads().., 2) | trunk()"]
 'format_timestamp(timestamp)' = 'timestamp.format("%F %H:%M")'
 
 [revsets]
-log = 'reachable(working_set, ~trunk_parents) ~ trunk()+::remote_only_branches'
+log = 'log_set'
 
 [revset-aliases]
 'remote_only_branches' = 'remote_branches() ~ branches()'
@@ -31,3 +31,4 @@ log = 'reachable(working_set, ~trunk_parents) ~ trunk()+::remote_only_branches'
 
 'my_heads' = 'heads(mine()) ~ ::remote_only_branches ~ trunk()'
 'working_set' = '(branches() ~ trunk() | my_heads):: | @'
+'log_set' = 'reachable(working_set, ~trunk_parents) ~ trunk()+::remote_only_branches'

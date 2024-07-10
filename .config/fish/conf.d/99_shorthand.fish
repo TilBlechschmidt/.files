@@ -34,6 +34,34 @@ if status is-interactive
     alias cfg 'git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 
+    ###### ------------ git ------------ ######
+    abbr -a jgf jj git fetch
+    abbr -a jgp jj git push
+
+    abbr -a jn jj new
+    abbr -a ja jj abandon
+    abbr -a jc --set-cursor jj commit
+    abbr -a jcm --set-cursor jj commit -m \"%\"
+    abbr -a jd --set-cursor jj describe -m \"%\"
+
+    abbr -a je jj edit 
+    abbr -a jsq jj squash
+    abbr -a jsqi jj squash -i
+
+    abbr -a jr jj rebase
+    abbr -a jrm "jj rebase --destination 'trunk()'"
+
+    abbr -a jbc jj branch create 
+    abbr -a jbs jj branch set 
+    abbr -a jbd jj branch delete 
+
+    abbr -a js jj show 
+    abbr -a jss jj show -s
+    
+    abbr -a jf jj fix
+    abbr -a ju jj undo
+
+
     ###### ------------ K8s ------------ ######
     abbr -a k kubectl
     abbr -a kl kubectl logs

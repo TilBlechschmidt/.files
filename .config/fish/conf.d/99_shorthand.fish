@@ -6,6 +6,9 @@ if status is-interactive
     alias cat 'bat --paging=never'
     alias cap 'cat --style=plain'
 
+    # Training wheels so I don't use `nvim` accidentally :D
+    abbr -a nvim hx
+
 
     ###### ------------ git ------------ ######
     abbr -a g git

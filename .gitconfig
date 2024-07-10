@@ -22,6 +22,7 @@
     diffFilter = delta --color-only
 [delta]
     navigate = true
+	hyperlinks = true
 [merge]
     conflictstyle = diff3
 [diff]

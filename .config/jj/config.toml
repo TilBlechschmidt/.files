@@ -33,4 +33,4 @@ log = 'log_set'
 'trunk_parents' = '::(trunk()-)'
 
 'working_set' = '((branches() ~ trunk()) | my_heads | my_remote_heads):: | @'
-'log_set' = 'reachable(working_set, ~trunk_parents) ~ trunk()+::remote_only_branches'
+'log_set' = 'reachable(working_set, ~trunk_parents) ~ trunk()+::remote_only_branches | @'

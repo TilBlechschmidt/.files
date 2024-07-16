@@ -40,6 +40,7 @@ if status is-interactive
     ###### ------------ git ------------ ######
     abbr -a jgf jj git fetch
     abbr -a jgp jj git push
+    abbr -a jgpc jj git push -c @
 
     abbr -a jn jj new
     abbr -a ja jj abandon

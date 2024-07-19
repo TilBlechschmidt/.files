@@ -48,20 +48,20 @@ if status is-interactive
     abbr -a jcm --set-cursor jj commit -m \"%\"
     abbr -a jd --set-cursor jj describe -m \"%\"
 
-    abbr -a je jj edit 
+    abbr -a je jj edit
     abbr -a jsq jj squash
     abbr -a jsqi jj squash -i
 
     abbr -a jr jj rebase
     abbr -a jrm "jj rebase --destination 'trunk()'"
 
-    abbr -a jbc jj branch create 
-    abbr -a jbs jj branch set 
-    abbr -a jbd jj branch delete 
+    abbr -a jbc jj branch create
+    abbr -a jbs jj branch set
+    abbr -a jbd jj branch delete
 
-    abbr -a js jj show 
+    abbr -a js jj show
     abbr -a jss jj show -s
-    
+
     abbr -a jf jj fix
     abbr -a ju jj undo
 
@@ -82,6 +82,7 @@ if status is-interactive
     abbr -a kgp kubectl get pod
     abbr -a kgpa kubectl get pod -A
     abbr -a kgpw kubectl get pod -w
+    abbr -a kgpaw kubectl get pod -A -w
 
     # describe
     abbr -a kd kubectl describe

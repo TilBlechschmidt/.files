@@ -26,8 +26,8 @@ l = ["log", "-r", "@ | ancestors(immutable_heads().., 2) | trunk()"]
 log = 'log_set'
 
 [revset-aliases]
-'my_remote_heads' = 'heads(mine() & remote_branches()) ~ trunk()'
-'my_heads' = 'heads(mine()) ~ empty() ~ ::remote_only_branches ~ trunk()'
+'my_remote_heads' = 'heads(mine() & remote_branches()) ~ ::trunk()'
+'my_heads' = 'heads(mine()) ~ empty() ~ ::remote_only_branches ~ ::trunk()'
 
 'remote_only_branches' = 'remote_branches() ~ branches() ~ my_remote_heads'
 'trunk_parents' = '::(trunk()-)'

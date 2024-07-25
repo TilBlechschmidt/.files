@@ -5,6 +5,7 @@ bufferline = "multiple"
 cursorline = false
 line-number = "relative"
 rulers = []
+scroll-lines = 1
 
 [editor.cursor-shape]
 insert = "bar"

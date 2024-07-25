@@ -19,4 +19,7 @@ if [ (uname) = "Darwin" ]
 
 	# 1Password SSH agent — required for `jj`` and other libssh2 based commands
 	set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+	# Set $SHELL to fish for some tools that use it
+	set -gx SHELL "fish"
 end

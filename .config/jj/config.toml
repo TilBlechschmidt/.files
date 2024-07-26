@@ -11,6 +11,7 @@ key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK6fG6geQa+vmktZfEFmAhLD3XcZPwtAuJdHE
 default-command = "log"
 paginate = "auto"
 pager = "delta"
+diff-editor = ":builtin"
 
 [ui.diff]
 format = "git"

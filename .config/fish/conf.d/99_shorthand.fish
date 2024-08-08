@@ -37,7 +37,10 @@ if status is-interactive
     alias cfg 'git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 
-    ###### ------------ git ------------ ######
+    ###### ------------ jj ------------ ######
+    abbr -a jgg jj-grab
+    abbr -a jgc jj-grab -c
+
     abbr -a jgf jj git fetch
     abbr -a jgp jj git push
     abbr -a jgpc jj git push -c @

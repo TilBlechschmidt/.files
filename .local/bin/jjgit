@@ -1,0 +1,3 @@
+#!/bin/sh
+# Thin wrapper around `jj git` for tools that need a binary like git-grab
+jj git $@

@@ -28,4 +28,8 @@ if [ (uname) = Darwin ]
 
     # Set $SHELL to fish for some tools that use it
     set -gx SHELL fish
+
+    # SDL2 search path weirdness
+    # https://github.com/PistonDevelopers/rust-empty/issues/175
+    set -gx LIBRARY_PATH "$LIBRARY_PATH:/opt/homebrew/lib"
 end

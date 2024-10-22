@@ -107,24 +107,24 @@ function __jj_changes
     -T 'separate("\t", change_id.shortest(), if(description, description.first_line(), "empty")) ++ "\n"'
 end
 
-function __jj_local_branches
+function __jj_local_bookmarks
   if string length --quiet -- $argv[1]
-    set -f rev "branches() & ($argv[1])"
+    set -f rev "bookmarks() & ($argv[1])"
   else
-    set -f rev "branches()"
+    set -f rev "bookmarks()"
   end
   __jj log --no-graph -r $rev \
-    -T 'local_branches.map(|branch| separate("\t", branch.name(), if(description, description.first_line(), "empty"))).join("\n") ++ "\n"'
+    -T 'local_bookmarks.map(|bookmark| separate("\t", bookmark.name(), if(description, description.first_line(), "empty"))).join("\n") ++ "\n"'
 end
 
-function __jj_remote_branches
+function __jj_remote_bookmarks
   if string length --quiet -- $argv[1]
-    set -f rev "remote_branches() & ($argv[1])"
+    set -f rev "remote_bookmarks() & ($argv[1])"
   else
-    set -f rev "remote_branches()"
+    set -f rev "remote_bookmarks()"
   end
   __jj log --no-graph -r $rev \
-    -T 'remote_branches.map(|branch| separate("\t", concat(branch.name(), "@", branch.remote()), if(description, description.first_line(), "empty"))).join("\n") ++ "\n"'
+    -T 'remote_bookmarks.map(|bookmark| separate("\t", concat(bookmark.name(), "@", bookmark.remote()), if(description, description.first_line(), "empty"))).join("\n") ++ "\n"'
 end
 
 function __jj_all_changes
@@ -133,12 +133,12 @@ function __jj_all_changes
   else
     set -f REV "all()"
   end
-   __jj_changes $REV; __jj_local_branches $REV; __jj_remote_branches $REV
+   __jj_changes $REV; __jj_local_bookmarks $REV; __jj_remote_bookmarks $REV
 end
 
 function __jj_mutable_changes
   set -f REV "log_set"
-  __jj_changes $REV; __jj_local_branches $REV; __jj_remote_branches $REV
+  __jj_changes $REV; __jj_local_bookmarks $REV; __jj_remote_bookmarks $REV
 end
 
 function __jj_revision_modified_files
@@ -304,7 +304,7 @@ complete -f -c jj -n '__jj_seen_subcommand_from obslog' -s r -l revision -rka '(
 complete -f -c jj -n '__jj_seen_subcommand_from parallelize' -ka '(__jj_mutable_changes)'
 complete -f -c jj -n '__jj_seen_subcommand_from rebase' -s r -l revisions -rka '(__jj_mutable_changes)'
 complete -f -c jj -n '__jj_seen_subcommand_from rebase' -s s -l source -rka '(__jj_mutable_changes)'
-complete -f -c jj -n '__jj_seen_subcommand_from rebase' -s b -l branch -rka '(__jj_mutable_changes)'
+complete -f -c jj -n '__jj_seen_subcommand_from rebase' -s b -l bookmark -rka '(__jj_mutable_changes)'
 complete -f -c jj -n '__jj_seen_subcommand_from rebase' -s d -l destination -rka '(__jj_all_changes)'
 complete -f -c jj -n '__jj_seen_subcommand_from rebase' -s A -l after -l insert-after -rka '(__jj_all_changes)'
 complete -f -c jj -n '__jj_seen_subcommand_from rebase' -s B -l before -l insert-before -rka '(__jj_mutable_changes)'
@@ -320,14 +320,19 @@ complete -f -c jj -n '__jj_seen_subcommand_from squash' -l to -l into -rka '(__j
 complete -f -c jj -n '__jj_seen_subcommand_from unsquash' -s r -l revision -rka '(__jj_mutable_changes)'
 
 # Branches.
-complete -f -c jj -n '__jj_seen_subcommand_from branch; and __jj_seen_subcommand_from delete forget rename set' -ka '(__jj_local_branches)'
-complete -f -c jj -n '__jj_seen_subcommand_from branch; and __jj_seen_subcommand_from track untrack' -ka '(__jj_remote_branches)'
-complete -f -c jj -n '__jj_seen_subcommand_from branch; and __jj_seen_subcommand_from create set' -s r -l revision -kra '(__jj_all_changes)'
+complete -f -c jj -n '__jj_seen_subcommand_from bookmark; and __jj_seen_subcommand_from delete forget rename set' -ka '(__jj_local_bookmarks)'
+complete -f -c jj -n '__jj_seen_subcommand_from bookmark; and __jj_seen_subcommand_from track untrack' -ka '(__jj_remote_bookmarks)'
+complete -f -c jj -n '__jj_seen_subcommand_from bookmark; and __jj_seen_subcommand_from create set' -s r -l revision -kra '(__jj_all_changes)'
+
+# Bookmarks.
+complete -f -c jj -n '__jj_seen_subcommand_from bookmark; and __jj_seen_subcommand_from delete forget rename set' -ka '(__jj_local_bookmarks)'
+complete -f -c jj -n '__jj_seen_subcommand_from bookmark; and __jj_seen_subcommand_from track untrack' -ka '(__jj_remote_bookmarks)'
+complete -f -c jj -n '__jj_seen_subcommand_from bookmark; and __jj_seen_subcommand_from create set' -s r -l revision -kra '(__jj_all_changes)'
 
 # Git.
 complete -f -c jj -n '__jj_seen_subcommand_from git; and __jj_seen_subcommand_from push' -s c -l change -kra '(__jj_changes "all()")'
 complete -f -c jj -n '__jj_seen_subcommand_from git; and __jj_seen_subcommand_from push' -s r -l revisions -kra '(__jj_changes "all()")'
-complete -f -c jj -n '__jj_seen_subcommand_from git; and __jj_seen_subcommand_from fetch push' -s b -l branch -rka '(__jj_local_branches)'
+complete -f -c jj -n '__jj_seen_subcommand_from git; and __jj_seen_subcommand_from fetch push' -s b -l bookmark -rka '(__jj_local_bookmarks)'
 complete -f -c jj -n '__jj_seen_subcommand_from git; and __jj_seen_subcommand_from fetch push' -l remote -rka '(__jj_remotes)'
 complete -f -c jj -n '__jj_seen_subcommand_from git; and __jj_seen_subcommand_from remote; and __jj_seen_subcommand_from rename remove' -ka '(__jj_remotes)'
 

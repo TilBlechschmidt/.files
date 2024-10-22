@@ -46,6 +46,7 @@ if status is-interactive
     abbr -a jgpc jj git push -c @
 
     abbr -a jn jj new
+    abbr -a jnm jj new "'trunk()'"
     abbr -a ja jj abandon
     abbr -a jc --set-cursor jj commit
     abbr -a jcm --set-cursor jj commit -m \"%\"
@@ -58,15 +59,19 @@ if status is-interactive
     abbr -a jr jj rebase
     abbr -a jrm "jj rebase --destination 'trunk()'"
 
-    abbr -a jbc jj branch create
-    abbr -a jbs jj branch set
-    abbr -a jbd jj branch delete
+    abbr -a jbc jj bookmark create
+    abbr -a jbs jj bookmark set
+    abbr -a jbd jj bookmark delete
 
     abbr -a js jj show
     abbr -a jss jj show -s
 
     abbr -a jf jj fix
     abbr -a ju jj undo
+
+    # Work related items
+    abbr -a jic ji commit
+    abbr -a jic- ji commit -r @-
 
 
     ###### ------------ K8s ------------ ######

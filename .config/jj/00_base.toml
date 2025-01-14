@@ -1,7 +1,7 @@
 [user]
 name = "Til Blechschmidt"
 email = "me@tibl.dev"
-
+ 
 [git]
 push-bookmark-prefix = "feature/tbl-"
 
@@ -23,7 +23,7 @@ format = "git"
 l = ["log", "-r", "@ | ancestors(immutable_heads().., 2) | trunk()"]
 
 [template-aliases]
-'format_short_signature(signature)' = 'signature.username()'
+'format_short_signature(signature)' = 'signature.email().local()'
 'format_timestamp(timestamp)' = 'timestamp.format("%F %H:%M")'
 
 [revsets]

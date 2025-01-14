@@ -33,7 +33,6 @@ if status is-interactive
     abbr -a gp git push
     abbr -a gpf git push --force-with-lease --force-if-includes
 
-    alias grepo 'git config --get remote.origin.url | sed "s/:/\//g" | sed "s/.git//g" | awk \'{print "http://"$1}\' | xargs open'
     alias cfg 'git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 
@@ -44,6 +43,7 @@ if status is-interactive
     abbr -a jgf jj git fetch
     abbr -a jgp jj git push
     abbr -a jgpc jj git push -c @
+    abbr -a jgpa jj git push --all
 
     abbr -a jn jj new
     abbr -a jnm jj new "'trunk()'"

@@ -56,12 +56,16 @@ if status is-interactive
     abbr -a jsq jj squash
     abbr -a jsqi jj squash -i
 
+    abbr -a jdf jj diff
+
     abbr -a jr jj rebase
     abbr -a jrm "jj rebase --destination 'trunk()'"
 
+    abbr -a jb jj bookmark
     abbr -a jbc jj bookmark create
     abbr -a jbs jj bookmark set
     abbr -a jbd jj bookmark delete
+    abbr -a jbt jj bookmark track
 
     abbr -a js jj show
     abbr -a jss jj show -s

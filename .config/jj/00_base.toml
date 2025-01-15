@@ -19,6 +19,9 @@ diff-editor = ":builtin"
 [ui.diff]
 format = "git"
 
+[snapshot]
+auto-update-stale = true
+
 [aliases]
 l = ["log", "-r", "@ | ancestors(immutable_heads().., 2) | trunk()"]
 

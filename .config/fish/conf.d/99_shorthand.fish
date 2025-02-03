@@ -44,6 +44,7 @@ if status is-interactive
     abbr -a jgp jj git push
     abbr -a jgpc jj git push -c @
     abbr -a jgpa jj git push --all
+    abbr -a jgpb jj git push --allow-new
 
     abbr -a jn jj new
     abbr -a jnm jj new "'trunk()'"

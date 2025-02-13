@@ -32,4 +32,7 @@ if [ (uname) = Darwin ]
     # SDL2 search path weirdness
     # https://github.com/PistonDevelopers/rust-empty/issues/175
     set -gx LIBRARY_PATH "$LIBRARY_PATH:/opt/homebrew/lib"
+
+    # Workaround for `jj` opening way too many files at once
+    ulimit -n 1024
 end

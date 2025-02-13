@@ -4,6 +4,7 @@ email = "me@tibl.dev"
  
 [git]
 push-bookmark-prefix = "feature/tbl-"
+push-new-bookmarks = true
 
 [signing]
 sign-all = true

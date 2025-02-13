@@ -44,7 +44,6 @@ if status is-interactive
     abbr -a jgp jj git push
     abbr -a jgpc jj git push -c @
     abbr -a jgpa jj git push --all
-    abbr -a jgpb jj git push --allow-new
 
     abbr -a jn jj new
     abbr -a jnm jj new "'trunk()'"
@@ -67,6 +66,7 @@ if status is-interactive
     abbr -a jbs jj bookmark set
     abbr -a jbd jj bookmark delete
     abbr -a jbt jj bookmark track
+    abbr -a jbf jj bookmark forget
 
     abbr -a js jj show
     abbr -a jss jj show -s

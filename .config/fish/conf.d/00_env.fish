@@ -5,7 +5,9 @@ fish_add_path -P $HOME/.local/bin
 fish_add_path -P $HOME/.cargo/bin
 
 # fnm (Generates OS specific paths ...)
-fnm env --use-on-cd | source
+if command --search --quiet "fnm"
+    fnm env --use-on-cd | source
+end
 
 # jj: Set the config variable to the directory
 # 	  Allows us to place and use multiple files

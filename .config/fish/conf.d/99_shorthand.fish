@@ -128,5 +128,6 @@ if status is-interactive
 
     ###### ----------- Other ----------- ######
     abbr -a tf terraform
+    abbr -a da direnv allow
 
 end

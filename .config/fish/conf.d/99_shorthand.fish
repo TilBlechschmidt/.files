@@ -87,6 +87,7 @@ if status is-interactive
     abbr -a kaf kubectl apply -f
     abbr -a kpf kubectl port-forward
     abbr -a kx --set-cursor kubectl exec -it \% -- /bin/sh
+    abbr -a kr kubectl run --rm -it --image alpine
 
     # get
     abbr -a kg kubectl get

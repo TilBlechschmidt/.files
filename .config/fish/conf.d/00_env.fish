@@ -5,7 +5,7 @@ fish_add_path -P $HOME/.local/bin
 fish_add_path -P $HOME/.cargo/bin
 
 # fnm (Generates OS specific paths ...)
-if command --search --quiet "fnm"
+if command --search --quiet fnm
     fnm env --use-on-cd | source
 end
 
@@ -24,3 +24,9 @@ set -gx GRAB_HOME $HOME/Developer
 # Fix for `delta` pager scrolling
 # https://github.com/dandavison/delta/issues/630#issuecomment-2003149860
 set -gx LESS '-R --mouse'
+
+# Disable Earthly analytics because it is invoked after each CLI call
+# and seemingly hosted behind Cloudflare which ... uhh ... is a problem
+# when being behind a huge ass dickhead of an ISP which does not peer
+# with them, instead asking a giant ransom which Cloudflare does not pay.
+set -gx EARTHLY_DISABLE_ANALYTICS 1

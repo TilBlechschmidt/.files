@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/fisher/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/fisher/completions/fisher\x2efish
 SETUVAR _fisher_nickeb96_2F_puffer_2D_fish_files:\x7e/\x2econfig/fish/fisher/functions/_puffer_fish_expand_bang\x2efish\x1e\x7e/\x2econfig/fish/fisher/functions/_puffer_fish_expand_dots\x2efish\x1e\x7e/\x2econfig/fish/fisher/functions/_puffer_fish_expand_lastarg\x2efish\x1e\x7e/\x2econfig/fish/fisher/conf\x2ed/puffer_fish_key_bindings\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1enickeb96/puffer\x2dfish

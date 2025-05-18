@@ -35,4 +35,7 @@ if [ (uname) = Darwin ]
 
     # Workaround for `jj` opening way too many files at once
     ulimit -n 1024
+
+    # By default SOPS looks in some obscure /Library/App... folder on macOS
+    export SOPS_AGE_KEY_FILE=$HOME/.config/sops/age/keys.txt
 end

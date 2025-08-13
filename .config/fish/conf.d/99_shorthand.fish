@@ -9,7 +9,6 @@ if status is-interactive
     # Training wheels so I don't use `nvim` accidentally :D
     abbr -a nvim hx
 
-
     ###### ------------ git ------------ ######
     abbr -a g git
     abbr -a gst git status
@@ -34,7 +33,6 @@ if status is-interactive
     abbr -a gpf git push --force-with-lease --force-if-includes
 
     alias cfg 'git --git-dir=$HOME/.cfg --work-tree=$HOME'
-
 
     ###### ------------ jj ------------ ######
     abbr -a jgg jj-grab
@@ -78,7 +76,6 @@ if status is-interactive
     abbr -a jic ji commit
     abbr -a jic- ji commit -r @-
 
-
     ###### ------------ K8s ------------ ######
     abbr -a k kubectl
     abbr -a kl kubectl logs
@@ -97,6 +94,8 @@ if status is-interactive
     abbr -a kgpa kubectl get pod -A
     abbr -a kgpw kubectl get pod -w
     abbr -a kgpaw kubectl get pod -A -w
+    abbr -a kgpow kubectl get pod -owide
+    abbr -a kgpaow kubectl get pod -A -owide
 
     # describe
     abbr -a kd kubectl describe
@@ -113,7 +112,6 @@ if status is-interactive
         abbr -a kcns kubectl config set-context --current --namespace
         abbr -a kcc kubectl config use-context
     end
-
 
     ###### ----------- Rust ------------ ######
     abbr -a c cargo

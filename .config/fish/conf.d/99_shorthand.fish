@@ -122,6 +122,8 @@ if status is-interactive
     abbr -a cb cargo build
     abbr -a cbr cargo build --release
 
+    abbr -a ct cargo test
+
     abbr -a ca cargo add
     abbr -a can cargo add --no-default-features
 

@@ -4,13 +4,14 @@ end
 
 function __fish_tcs_clusters
     __fish_tcs_login
-    tsh clusters -f json | jq -r  '.[].cluster_name'
+    tsh clusters -f json | jq -r '.[].cluster_name'
 end
 
 function __fish_tcs_refresh
     set -f clusters
 
     for teleportCluster in (__fish_tcs_clusters)
+        echo "@ $teleportCluster"
         for kubernetesCluster in (tsh kube ls -f json -c $teleportCluster | jq -r '.[].kube_cluster_name')
             if [ "$kubernetesCluster" = "$teleportCluster" ]
                 # For some reason we have kube clusters that have an identical name
@@ -35,7 +36,7 @@ function tcs -d 'Temporarily connect to a Teleport K8s cluster'
         return 1
     end
 
-    argparse 'r/refresh' 'h/help' -- $argv
+    argparse r/refresh h/help -- $argv
     or return 1
 
     if set -q _flag_help

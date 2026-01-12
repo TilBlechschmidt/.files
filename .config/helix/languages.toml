@@ -11,6 +11,10 @@ name = "html"
 indent = { tab-width = 2, unit = "    " }
 
 [[language]]
+name = "markdown"
+soft-wrap = { enable = true }
+
+[[language]]
 name = "nix"
 language-servers = ["nixd","nil"]
 

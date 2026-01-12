@@ -2,9 +2,8 @@
 name = "Til Blechschmidt"
 email = "me@tibl.dev"
  
-[git]
-push-bookmark-prefix = "feature/tbl-"
-push-new-bookmarks = true
+[remotes]
+origin.auto-track-bookmarks = "*"
 
 [signing]
 behavior = "own"
@@ -16,15 +15,16 @@ default-command = "log"
 paginate = "auto"
 pager = "delta"
 diff-editor = ":builtin"
-
-[ui.diff]
-format = "git"
+diff-formatter = ":git"
 
 [snapshot]
 auto-update-stale = true
 
 [aliases]
 l = ["log", "-r", "@ | ancestors(immutable_heads().., 2) | trunk()"]
+
+[templates]
+git_push_bookmark = '"feature/tbl-" ++ change_id.short()'
 
 [template-aliases]
 'format_short_signature(signature)' = 'signature.email().local()'

@@ -2,9 +2,6 @@
 name = "Til Blechschmidt"
 email = "me@tibl.dev"
  
-[remotes]
-origin.auto-track-bookmarks = "*"
-
 [signing]
 behavior = "own"
 backend = "ssh"
